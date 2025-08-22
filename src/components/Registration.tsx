@@ -34,40 +34,60 @@ export const Registration = () => {
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    if (!formData.agreeTerms) {
-      toast({
-        title: "Agreement Required",
-        description: "Please accept the terms and conditions to register.",
-        variant: "destructive"
-      });
-      return;
-    }
+  e.preventDefault();
 
-    setIsSubmitting(true);
-    
-    // Simulate API call
-    setTimeout(() => {
-      setIsSubmitting(false);
+  if (!formData.agreeTerms) {
+    toast({
+      title: "Agreement Required",
+      description: "Please accept the terms and conditions to register.",
+      variant: "destructive",
+    });
+    return;
+  }
+
+  setIsSubmitting(true);
+
+  try {
+    const response = await fetch("https://script.google.com/macros/s/AKfycbxiG8p085bdlB8E-WMRrRQkMhcEl4mmRhQ1CPU6oeFXpYnYE4vcaBb2BJvhXeKNd13eTw/exec", {
+      method: "POST",
+      body: JSON.stringify(formData),
+    });
+
+    if (response.ok) {
       toast({
         title: "Registration Successful!",
-        description: "Your team has been registered for Chakravyu. Check your email for confirmation.",
-        variant: "default"
+        description: "Your team has been registered for Chakravyu.",
+        variant: "default",
       });
-      
+
       // Reset form
       setFormData({
-        teamName: '',
-        leaderName: '',
-        leaderEmail: '',
-        leaderPhone: '',
-        college: '',
-        members: ['', '', '', ''],
-        agreeTerms: false
+        teamName: "",
+        leaderName: "",
+        leaderEmail: "",
+        leaderPhone: "",
+        college: "",
+        members: ["", "", "", ""],
+        agreeTerms: false,
       });
-    }, 2000);
-  };
+    } else {
+      toast({
+        title: "Error",
+        description: "Something went wrong. Try again.",
+        variant: "destructive",
+      });
+    }
+  } catch (err) {
+    toast({
+      title: "Network Error",
+      description: "Unable to submit form. Please try again later.",
+      variant: "destructive",
+    });
+  }
+
+  setIsSubmitting(false);
+};
+
 
   return (
     <section id="register" className="py-20 px-4">
