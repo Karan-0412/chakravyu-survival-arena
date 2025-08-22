@@ -48,10 +48,13 @@ export const Registration = () => {
   setIsSubmitting(true);
 
   try {
-    const response = await fetch("https://script.google.com/macros/s/AKfycbxiG8p085bdlB8E-WMRrRQkMhcEl4mmRhQ1CPU6oeFXpYnYE4vcaBb2BJvhXeKNd13eTw/exec", {
-      method: "POST",
-      body: JSON.stringify(formData),
-    });
+    const response = await fetch("https://script.google.com/macros/s/AKfycbwmsvWpqNP5DnQ2k5D-vHrHnsR14zLL40DG2vap4roLjT_hDnN4_TuaeveWRlbLOvfpPQ/exec", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",  // Important
+  },
+  body: JSON.stringify(formData),
+});
 
     if (response.ok) {
       toast({
