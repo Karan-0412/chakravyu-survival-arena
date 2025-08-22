@@ -13,7 +13,7 @@ export const Hero = () => {
   useEffect(() => {
     // Set event date to 30 days from now for demo
     const eventDate = new Date();
-    eventDate.setDate(eventDate.getDate() + 30);
+    eventDate.setDate(eventDate.getDate() + 2);
 
     const timer = setInterval(() => {
       const now = new Date().getTime();
