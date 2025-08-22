@@ -48,17 +48,13 @@ export const Registration = () => {
   setIsSubmitting(true);
 
   try {
-    const response = await fetch(
-      "https://script.google.com/macros/s/AKfycbwmsvWpqNP5DnQ2k5D-vHrHnsR14zLL40DG2vap4roLjT_hDnN4_TuaeveWRlbLOvfpPQ/exec",
-      {
-        method: "POST",
-        mode: "cors", // 👈 required for CORS
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      }
-    );
+    const response = await fetch("/api/submitForm", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    });
 
     const result = await response.json();
 
@@ -66,10 +62,8 @@ export const Registration = () => {
       toast({
         title: "Registration Successful!",
         description: "Your team has been registered for Chakravyu.",
-        variant: "default",
       });
 
-      // Reset form
       setFormData({
         teamName: "",
         leaderName: "",
@@ -82,7 +76,7 @@ export const Registration = () => {
     } else {
       toast({
         title: "Error",
-        description: result.error || "Something went wrong. Try again.",
+        description: "Something went wrong. Try again.",
         variant: "destructive",
       });
     }
@@ -92,7 +86,6 @@ export const Registration = () => {
       description: "Unable to submit form. Please try again later.",
       variant: "destructive",
     });
-    console.error("Error submitting form:", err);
   }
 
   setIsSubmitting(false);
