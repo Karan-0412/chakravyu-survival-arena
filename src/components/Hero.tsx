@@ -1,0 +1,90 @@
+
+import { useState, useEffect } from "react";
+import { ChevronDown, Clock } from "lucide-react";
+
+export const Hero = () => {
+  const [timeLeft, setTimeLeft] = useState({
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0
+  });
+
+  useEffect(() => {
+    // Set event date to 30 days from now for demo
+    const eventDate = new Date();
+    eventDate.setDate(eventDate.getDate() + 30);
+
+    const timer = setInterval(() => {
+      const now = new Date().getTime();
+      const distance = eventDate.getTime() - now;
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      setTimeLeft({ days, hours, minutes, seconds });
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, []);
+
+  return (
+    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
+      {/* Background Effects */}
+      <div className="absolute inset-0 bg-gradient-to-br from-midnight via-charcoal to-midnight"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,hsl(var(--blood-red)_/_0.1)_0%,transparent_70%)]"></div>
+      
+      {/* Floating Geometric Shapes */}
+      <div className="absolute top-20 left-10 w-4 h-4 bg-primary rotate-45 animate-pulse"></div>
+      <div className="absolute top-40 right-20 w-6 h-6 border-2 border-primary rounded-full animate-pulse-red"></div>
+      <div className="absolute bottom-40 left-20 w-8 h-8 bg-primary/30 rotate-45 animate-pulse"></div>
+      
+      <div className="container mx-auto px-4 text-center z-10">
+        <div className="animate-fade-in-up">
+          <h1 className="text-hero mb-6 animate-glitch">
+            CHAKRAVYU
+          </h1>
+          <p className="text-subtitle mb-8 max-w-2xl mx-auto">
+            Enter the deadliest games ever conceived. Survive the maze of challenges. 
+            Only the worthy will claim victory.
+          </p>
+          
+          {/* Countdown Timer */}
+          <div className="flex justify-center items-center mb-8 space-x-1">
+            <Clock className="text-primary mr-3" size={24} />
+            <span className="text-lg font-medium text-muted-foreground mr-4">Event starts in:</span>
+            <div className="flex space-x-4">
+              {Object.entries(timeLeft).map(([unit, value]) => (
+                <div key={unit} className="text-center animate-countdown-pulse">
+                  <div className="bg-primary text-primary-foreground px-3 py-2 rounded-lg font-bold text-xl min-w-[60px]">
+                    {value.toString().padStart(2, '0')}
+                  </div>
+                  <div className="text-sm text-muted-foreground mt-1 capitalize">
+                    {unit}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <button className="btn-primary group">
+              Register Now
+              <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
+            </button>
+            <button className="btn-ghost">
+              Learn More
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* Scroll Indicator */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <ChevronDown className="text-primary" size={32} />
+      </div>
+    </section>
+  );
+};

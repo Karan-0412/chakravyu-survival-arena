@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -52,16 +53,12 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				sidebar: {
-					DEFAULT: 'hsl(var(--sidebar-background))',
-					foreground: 'hsl(var(--sidebar-foreground))',
-					primary: 'hsl(var(--sidebar-primary))',
-					'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
-					accent: 'hsl(var(--sidebar-accent))',
-					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
-					border: 'hsl(var(--sidebar-border))',
-					ring: 'hsl(var(--sidebar-ring))'
-				}
+				'blood-red': 'hsl(var(--blood-red))',
+				'dark-red': 'hsl(var(--dark-red))',
+				'midnight': 'hsl(var(--midnight))',
+				'charcoal': 'hsl(var(--charcoal))',
+				'smoke': 'hsl(var(--smoke))',
+				'ghost': 'hsl(var(--ghost))'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,11 +81,35 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'fade-in-up': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateY(30px)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateY(0)'
+					}
+				},
+				'pulse-red': {
+					'0%, 100%': { 
+						'box-shadow': '0 0 0 0 hsl(var(--blood-red) / 0.7)'
+					},
+					'50%': { 
+						'box-shadow': '0 0 0 20px hsl(var(--blood-red) / 0)'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in-up': 'fade-in-up 0.6s ease-out',
+				'pulse-red': 'pulse-red 2s infinite'
+			},
+			fontFamily: {
+				'display': ['Orbitron', 'monospace'],
+				'sans': ['Inter', 'sans-serif']
 			}
 		}
 	},
