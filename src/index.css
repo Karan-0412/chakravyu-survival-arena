@@ -52,7 +52,7 @@
 
   body {
     @apply bg-background text-foreground font-sans;
-    background: linear-gradient(135deg, hsl(var(--midnight)) 0%, hsl(var(--charcoal)) 50%, hsl(var(--midnight)) 100%);
+    background: linear-gradient(135deg, hsl(0 0% 4%) 0%, hsl(0 0% 6%) 50%, hsl(0 0% 3%) 100%);
     min-height: 100vh;
   }
 
@@ -112,10 +112,12 @@
   /* Typography variants */
   .text-hero {
     @apply text-6xl md:text-8xl font-black font-display tracking-tight;
-    background: linear-gradient(135deg, hsl(var(--ghost)) 0%, hsl(var(--blood-red)) 100%);
+    background: linear-gradient(135deg, hsl(var(--blood-red)) 0%, hsl(var(--dark-red)) 50%, hsl(var(--blood-red)) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    filter: drop-shadow(0 0 20px hsl(var(--blood-red) / 0.8));
+    text-shadow: 0 0 30px hsl(var(--blood-red) / 0.6);
   }
 
   .text-subtitle {

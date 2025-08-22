@@ -33,8 +33,8 @@ export const Hero = () => {
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
       {/* Background Effects */}
-      <div className="absolute inset-0 bg-gradient-to-br from-midnight via-charcoal to-midnight"></div>
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,hsl(var(--blood-red)_/_0.1)_0%,transparent_70%)]"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,hsl(var(--blood-red)_/_0.2)_0%,transparent_60%)]"></div>
       
       {/* Floating Geometric Shapes */}
       <div className="absolute top-20 left-10 w-4 h-4 bg-primary rotate-45 animate-pulse"></div>
@@ -69,13 +69,13 @@ export const Hero = () => {
             </div>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <button className="btn-primary group">
+          <div className="flex justify-center items-center">
+            <button 
+              className="btn-primary group"
+              onClick={() => document.getElementById('registration')?.scrollIntoView({ behavior: 'smooth' })}
+            >
               Register Now
               <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
-            </button>
-            <button className="btn-ghost">
-              Learn More
             </button>
           </div>
         </div>
