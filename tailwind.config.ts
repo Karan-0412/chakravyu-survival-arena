@@ -108,7 +108,8 @@ export default {
 				'pulse-red': 'pulse-red 2s infinite'
 			},
 			fontFamily: {
-				'display': ['Orbitron', 'monospace'],
+				'display': ['Nosifer', 'Creepster', 'Orbitron', 'monospace'],
+				'horror': ['Creepster', 'Orbitron', 'monospace'],
 				'sans': ['Inter', 'sans-serif']
 			}
 		}

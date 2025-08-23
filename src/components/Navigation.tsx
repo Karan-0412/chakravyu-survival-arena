@@ -43,6 +43,11 @@ export const Navigation = () => {
                 {item.label}
               </a>
             ))}
+            <div className="ml-8 flex items-center">
+              <div className="text-primary font-bold text-lg border-2 border-primary rounded-full w-12 h-12 flex items-center justify-center animate-pulse-red">
+                ATW
+              </div>
+            </div>
           </div>
 
           {/* Mobile Navigation Button */}

@@ -3,7 +3,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600;700&family=Creepster&family=Nosifer&display=swap');
 
 @layer base {
   :root {
@@ -63,12 +63,74 @@
   }
 
   @keyframes glitch {
-    0% { transform: translateX(0); }
-    20% { transform: translateX(-2px); }
-    40% { transform: translateX(2px); }
-    60% { transform: translateX(-2px); }
-    80% { transform: translateX(2px); }
-    100% { transform: translateX(0); }
+    0% { 
+      transform: translateX(0) skew(0deg); 
+      filter: hue-rotate(0deg);
+    }
+    10% { 
+      transform: translateX(-5px) skew(-2deg); 
+      filter: hue-rotate(90deg);
+    }
+    20% { 
+      transform: translateX(5px) skew(2deg); 
+      filter: hue-rotate(180deg);
+    }
+    30% { 
+      transform: translateX(-3px) skew(-1deg); 
+      filter: hue-rotate(270deg);
+    }
+    40% { 
+      transform: translateX(3px) skew(1deg); 
+      filter: hue-rotate(360deg);
+    }
+    50% { 
+      transform: translateX(-2px) skew(-0.5deg); 
+      filter: hue-rotate(450deg);
+    }
+    60% { 
+      transform: translateX(2px) skew(0.5deg); 
+      filter: hue-rotate(540deg);
+    }
+    70% { 
+      transform: translateX(-1px) skew(-0.25deg); 
+      filter: hue-rotate(630deg);
+    }
+    80% { 
+      transform: translateX(1px) skew(0.25deg); 
+      filter: hue-rotate(720deg);
+    }
+    90% { 
+      transform: translateX(-0.5px) skew(-0.1deg); 
+      filter: hue-rotate(810deg);
+    }
+    100% { 
+      transform: translateX(0) skew(0deg); 
+      filter: hue-rotate(900deg);
+    }
+  }
+
+  @keyframes float {
+    0%, 100% { 
+      transform: translateY(0px) rotate(0deg); 
+    }
+    50% { 
+      transform: translateY(-20px) rotate(180deg); 
+    }
+  }
+
+  @keyframes bloodDrip {
+    0% { 
+      transform: translateY(-10px) scaleY(0.8);
+      opacity: 0.8;
+    }
+    50% { 
+      transform: translateY(5px) scaleY(1.2);
+      opacity: 1;
+    }
+    100% { 
+      transform: translateY(0px) scaleY(1);
+      opacity: 0.9;
+    }
   }
 
   @keyframes fade-in-up {
@@ -98,7 +160,15 @@
   }
 
   .animate-glitch {
-    animation: glitch 0.3s ease-in-out;
+    animation: glitch 3s ease-in-out infinite;
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-blood-drip {
+    animation: bloodDrip 2s ease-in-out infinite;
   }
 
   .animate-fade-in-up {
