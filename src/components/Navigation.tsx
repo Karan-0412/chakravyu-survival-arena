@@ -20,7 +20,6 @@ export const Navigation = () => {
     { href: "#rules", label: "Rules" },
     { href: "#timeline", label: "Timeline" },
     { href: "#prizes", label: "Prizes" },
-    { href: "#register", label: "Register" },
   ];
 
   return (

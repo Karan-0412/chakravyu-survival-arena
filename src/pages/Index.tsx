@@ -4,7 +4,6 @@ import { EventDetails } from "@/components/EventDetails";
 import { Rules } from "@/components/Rules";
 import { Timeline } from "@/components/Timeline";
 import { Prizes } from "@/components/Prizes";
-import { Registration } from "@/components/Registration";
 import { Navigation } from "@/components/Navigation";
 
 const Index = () => {
@@ -16,7 +15,6 @@ const Index = () => {
       <Rules />
       <Timeline />
       <Prizes />
-      <Registration />
     </div>
   );
 };

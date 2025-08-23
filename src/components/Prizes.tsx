@@ -5,7 +5,7 @@ export const Prizes = () => {
   const prizes = [
     {
       position: "1st Place",
-      amount: "₹25,000",
+      amount: "Blinkit Kit + 50% off on Manali Trip",
       icon: Trophy,
       color: "text-yellow-500",
       bgColor: "bg-yellow-500/20",
@@ -13,7 +13,7 @@ export const Prizes = () => {
     },
     {
       position: "2nd Place", 
-      amount: "₹15,000",
+      amount: "Blinkit Kit + 25% off on Manali Trip",
       icon: Medal,
       color: "text-gray-400",
       bgColor: "bg-gray-400/20",
@@ -21,7 +21,7 @@ export const Prizes = () => {
     },
     {
       position: "3rd Place",
-      amount: "₹10,000", 
+      amount: "25% off on Manali Trip", 
       icon: Award,
       color: "text-amber-600",
       bgColor: "bg-amber-600/20",
@@ -85,42 +85,13 @@ export const Prizes = () => {
           })}
         </div>
 
-        {/* Special Prizes */}
-        <div className="card-dark">
-          <div className="text-center mb-8">
-            <h3 className="text-2xl font-bold text-foreground mb-4 font-display flex items-center justify-center">
-              <Gift className="text-primary mr-3" size={28} />
-              Special Recognition Awards
-            </h3>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {specialPrizes.map((special, index) => (
-              <div 
-                key={index}
-                className="text-center p-4 border border-border rounded-lg hover:border-primary/50 transition-all duration-300"
-              >
-                <h4 className="font-bold text-lg text-foreground mb-2">
-                  {special.title}
-                </h4>
-                <div className="text-2xl font-bold text-primary mb-2 font-display">
-                  {special.prize}
-                </div>
-                <p className="text-muted-foreground text-sm">
-                  {special.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-
         {/* Total Prize Pool */}
         <div className="text-center mt-12">
           <div className="inline-flex items-center bg-primary/20 border border-primary/50 rounded-lg px-8 py-4">
             <Trophy className="text-primary mr-4" size={32} />
             <div>
               <div className="text-sm text-primary font-semibold">TOTAL PRIZE POOL</div>
-              <div className="text-3xl font-black text-primary font-display">₹50,000</div>
+              <div className="text-3xl font-black text-primary font-display">₹10,000</div>
             </div>
           </div>
         </div>

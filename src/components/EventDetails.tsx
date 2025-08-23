@@ -6,22 +6,22 @@ export const EventDetails = () => {
     {
       icon: Calendar,
       title: "Date & Time",
-      description: "March 15, 2024 | 6:00 PM - 11:00 PM"
+      description: "August 25, 2025 | 9:00 PM - 5:00 PM"
     },
     {
       icon: MapPin,
       title: "Venue",
-      description: "College Auditorium & Sports Complex"
+      description: "D8 Auditorium "
     },
     {
       icon: Users,
       title: "Participants",
-      description: "456 Players | Teams of 4-6 Members"
+      description: "300 Players | Teams of 4 Members"
     },
     {
       icon: Trophy,
       title: "Prize Pool",
-      description: "₹50,000 Total Prize Money"
+      description: "₹10,000 Total Prize Money"
     }
   ];
 
@@ -68,12 +68,9 @@ export const EventDetails = () => {
               Welcome to Chakravyu
             </h3>
             <p className="text-muted-foreground leading-relaxed max-w-4xl mx-auto">
-              In the ancient Sanskrit epic Mahabharata, Chakravyu was an impenetrable military formation - a deadly maze that claimed even the bravest warriors. 
-              Tonight, we recreate this legendary challenge through a series of games that will test every aspect of human capability. 
+             Inspired by the legendary Chakravyu from the Mahabharata, our Survival Arena challenges teams to navigate a series of thrilling, mind-bending games. Tonight, strategy, speed, and teamwork will be put to the ultimate test as participants face puzzles, physical challenges, and mental mazes designed to push even the bravest warriors to their limits.
               <br /><br />
-              From the innocent game of Red Light, Green Light to complex puzzles that require perfect teamwork, 
-              each challenge eliminates the weak and rewards the strategic. Only those who can navigate the maze of mind games, 
-              physical challenges, and psychological warfare will emerge victorious.
+              From the thrilling Treasure Hunt to intricate puzzles demanding flawless teamwork, each challenge in the Chakravyu Survival Arena tests every skill. Only the sharp, the strategic, and the resilient can navigate the maze of mind games, physical trials, and psychological tactics to emerge victorious.
               <br /><br />
               <span className="text-primary font-semibold">
                 Are you ready to enter the Chakravyu?

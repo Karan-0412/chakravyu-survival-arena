@@ -4,55 +4,43 @@ import { Clock, CheckCircle, Circle } from "lucide-react";
 export const Timeline = () => {
   const timelineEvents = [
     {
-      time: "5:30 PM",
+      time: "9:00 PM",
       title: "Registration & Check-in",
       description: "Team verification and briefing session",
       completed: false
     },
     {
-      time: "6:00 PM",
+      time: "9:30 PM",
       title: "Opening Ceremony",
       description: "Welcome address and game rules explanation",
       completed: false
     },
     {
-      time: "6:30 PM",
-      title: "Game 1: Red Light, Green Light",
+      time: "10:00 PM",
+      title: "Round-1",
       description: "Classic elimination game with a deadly twist",
       completed: false
     },
     {
-      time: "7:15 PM",
-      title: "Game 2: Honeycomb Challenge",
+      time: "11:30 PM",
+      title: "Round-2",
       description: "Precision and patience under pressure",
       completed: false
     },
     {
-      time: "8:00 PM",
-      title: "Game 3: Tug of War",
-      description: "Ultimate test of teamwork and strategy",
-      completed: false
-    },
-    {
-      time: "8:45 PM",
-      title: "Game 4: Marbles",
+      time: "2:00 PM",
+      title: "Round-3",
       description: "Mind games and psychological warfare",
       completed: false
     },
     {
-      time: "9:30 PM",
-      title: "Game 5: Glass Bridge",
-      description: "Leap of faith with calculated risks",
+      time: "3:30 PM",
+      title: "Final Round",
+      description: "Ultimate test of teamwork and strategy",
       completed: false
     },
     {
-      time: "10:15 PM",
-      title: "Final Game: Squid Game",
-      description: "The ultimate childhood game turned deadly",
-      completed: false
-    },
-    {
-      time: "11:00 PM",
+      time: "4:00 PM",
       title: "Victory Ceremony",
       description: "Crown the champions and distribute prizes",
       completed: false
@@ -122,7 +110,7 @@ export const Timeline = () => {
               <Clock className="text-primary mr-3" size={24} />
               <div>
                 <h3 className="font-bold text-lg text-foreground">Total Duration</h3>
-                <p className="text-muted-foreground">Approximately 5.5 hours of intense competition</p>
+                <p className="text-muted-foreground">Approximately 6 hours of intense competition</p>
               </div>
             </div>
           </div>

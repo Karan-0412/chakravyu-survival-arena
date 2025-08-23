@@ -4,31 +4,35 @@ import { ChevronDown, Clock } from "lucide-react";
 
 export const Hero = () => {
   const [timeLeft, setTimeLeft] = useState({
-    days: 0,
-    hours: 0,
-    minutes: 0,
-    seconds: 0
-  });
+  days: 0,
+  hours: 0,
+  minutes: 0,
+  seconds: 0
+});
 
-  useEffect(() => {
-    // Set event date to 30 days from now for demo
-    const eventDate = new Date();
-    eventDate.setDate(eventDate.getDate() + 2);
+useEffect(() => {
+  const eventDate = new Date(2025, 7, 25, 0, 0, 0); // August 25, 2025, 12:00
 
-    const timer = setInterval(() => {
-      const now = new Date().getTime();
-      const distance = eventDate.getTime() - now;
+  const timer = setInterval(() => {
+    const now = new Date().getTime();
+    const distance = eventDate.getTime() - now;
 
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    if (distance <= 0) {
+      clearInterval(timer);
+      setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+      return;
+    }
 
-      setTimeLeft({ days, hours, minutes, seconds });
-    }, 1000);
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-    return () => clearInterval(timer);
-  }, []);
+    setTimeLeft({ days, hours, minutes, seconds });
+  }, 1000);
+
+  return () => clearInterval(timer);
+}, []);
 
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
@@ -43,9 +47,17 @@ export const Hero = () => {
       
       <div className="container mx-auto px-4 text-center z-10">
         <div className="animate-fade-in-up">
-          <h1 className="text-hero mb-6 animate-glitch">
-            CHAKRAVYU
-          </h1>
+          <div className="text-center mb-6">
+  <h3 className="text-lg md:text-xl font-bold text-red-500 mb-2 animate-fade-in-up">
+    Apex Techno Warriors
+  </h3>
+
+  {/* Event Title */}
+  <h1 className="text-6xl md:text-8xl font-black text-gradient-to-r from-pink-500 to-purple-500 mb-6 animate-glitch">
+    CHAKRAVYU
+  </h1>
+</div>
+
           <p className="text-subtitle mb-8 max-w-2xl mx-auto">
             Enter the deadliest games ever conceived. Survive the maze of challenges. 
             Only the worthy will claim victory.
@@ -70,13 +82,14 @@ export const Hero = () => {
           </div>
 
           <div className="flex justify-center items-center">
-            <button 
-              className="btn-primary group"
-              onClick={() => document.getElementById('registration')?.scrollIntoView({ behavior: 'smooth' })}
-            >
-              Register Now
-              <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
-            </button>
+           <button 
+  className="btn-primary group"
+  onClick={() => window.open('https://forms.gle/97YfJnHVg8XP9cGh6', '_blank')}
+>
+  Confirm Your Spot
+  <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
+</button>
+
           </div>
         </div>
       </div>

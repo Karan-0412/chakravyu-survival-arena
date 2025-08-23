@@ -30,22 +30,12 @@ export const Rules = () => {
       icon: Target,
       title: "Victory Conditions",
       content: [
-        "Complete all 6 games to reach the final challenge",
+        "Complete all games to reach the final challenge",
         "Final game determines the ultimate winner",
         "Ties will be broken by sudden-death challenges",
         "Winners must demonstrate both skill and strategy"
       ]
     },
-    {
-      icon: Zap,
-      title: "Special Abilities",
-      content: [
-        "Each team gets one 'Immunity Shield' to save from elimination",
-        "Hidden advantages scattered throughout the venue",
-        "Alliances allowed but betrayal is part of the game",
-        "Bonus challenges offer extra lives and advantages"
-      ]
-    }
   ];
 
   return (
