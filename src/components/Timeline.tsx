@@ -28,13 +28,25 @@ export const Timeline = () => {
       completed: false
     },
     {
-      time: "2:00 PM",
+      time: "12:30 PM",
+      title: "Lunch Break",
+      description: "Refuel and strategize for the challenges ahead",
+      completed: false
+    },
+    {
+      time: "1:30 PM",
       title: "Round-3",
+      description: "Brains, courage, victory",
+      completed: false
+    },
+    {
+      time: "2:30 PM",
+      title: "Semi-Final Round",
       description: "Mind games and psychological warfare",
       completed: false
     },
     {
-      time: "3:30 PM",
+      time: "3:00 PM",
       title: "Final Round",
       description: "Ultimate test of teamwork and strategy",
       completed: false

@@ -11,7 +11,6 @@ export const Rules = () => {
       title: "Elimination Rules",
       content: [
         "Players eliminated in any game cannot continue to the next round",
-        "Teams losing majority members are automatically disqualified",
         "Cheating or rule violations result in immediate elimination",
         "No second chances - every decision counts"
       ]

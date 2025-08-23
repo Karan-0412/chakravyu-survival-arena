@@ -1,7 +1,7 @@
-
+import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
-import { ChevronDown, Clock } from "lucide-react";
-
+import { ArrowRight,ChevronDown, Clock } from "lucide-react";
+import { Link } from "react-router-dom";
 export const Hero = () => {
   const [timeLeft, setTimeLeft] = useState({
   days: 0,
@@ -82,14 +82,12 @@ useEffect(() => {
           </div>
 
           <div className="flex justify-center items-center">
-           <button 
-  className="btn-primary group"
-  onClick={() => window.open('https://forms.gle/97YfJnHVg8XP9cGh6', '_blank')}
->
-  Confirm Your Spot
-  <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
-</button>
-
+           <Link to = "/confirmed-teams">
+              <Button size="lg" className="hero-gradient shadow-glow hover:scale-105 transition-bounce group">
+              View Confirmed Teams
+              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-smooth" />
+            </Button>
+            </Link>
           </div>
         </div>
       </div>

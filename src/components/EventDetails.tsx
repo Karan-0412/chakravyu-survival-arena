@@ -16,7 +16,7 @@ export const EventDetails = () => {
     {
       icon: Users,
       title: "Participants",
-      description: "300 Players | Teams of 4 Members"
+      description: "260 Players | Teams of 4 Members"
     },
     {
       icon: Trophy,
@@ -31,7 +31,6 @@ export const EventDetails = () => {
         <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="text-section-title mb-4">The Game Begins</h2>
           <p className="text-subtitle max-w-2xl mx-auto">
-            Step into a world where childhood games become deadly challenges. 
             Inspired by the global phenomenon, Chakravyu tests your wit, courage, and teamwork.
           </p>
         </div>
@@ -68,7 +67,7 @@ export const EventDetails = () => {
               Welcome to Chakravyu
             </h3>
             <p className="text-muted-foreground leading-relaxed max-w-4xl mx-auto">
-             Inspired by the legendary Chakravyu from the Mahabharata, our Survival Arena challenges teams to navigate a series of thrilling, mind-bending games. Tonight, strategy, speed, and teamwork will be put to the ultimate test as participants face puzzles, physical challenges, and mental mazes designed to push even the bravest warriors to their limits.
+             Inspired by the legendary Chakravyu from the Mahabharata, our Survival Arena challenges teams to navigate a series of thrilling, mind-bending games. Strategy, speed, and teamwork will be put to the ultimate test as participants face puzzles, physical challenges, and mental mazes designed to push even the bravest warriors to their limits.
               <br /><br />
               From the thrilling Treasure Hunt to intricate puzzles demanding flawless teamwork, each challenge in the Chakravyu Survival Arena tests every skill. Only the sharp, the strategic, and the resilient can navigate the maze of mind games, physical trials, and psychological tactics to emerge victorious.
               <br /><br />
