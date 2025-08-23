@@ -112,7 +112,7 @@
   /* Typography variants */
   .text-hero {
     /* display: inline-block ; */
-    @apply text-5xl md:text-8xl font-black font-display tracking-tight;
+    @apply text-7xl md:text-8xl font-black font-display tracking-tight;
     background: linear-gradient(
   135deg, 
   hsl(var(--blood-red)) 0%, 
