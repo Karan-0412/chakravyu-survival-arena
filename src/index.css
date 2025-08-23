@@ -231,4 +231,14 @@
   .font-sans {
     font-family: 'Inter', sans-serif;
   }
+  .logo-bg {
+  width: 140px;
+  height: 60px;
+  background-image: url('src/components/image.png'); /* path to your image */
+  background-size: contain;       /* fit image inside div */
+  background-position: center;    /* center the image */
+  background-repeat: no-repeat;   /* don’t repeat */
+  border-radius: 8px;             /* optional: rounded corners */
+}
+
 }

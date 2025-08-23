@@ -48,12 +48,20 @@ useEffect(() => {
       <div className="container mx-auto px-4 text-center z-10">
         <div className="animate-fade-in-up">
           <div className="text-center mb-6">
+<<<<<<< HEAD
   <h3 className="text-lg md:text-xl font-bold text-primary mb-2 animate-blood-drip">
+=======
+  <h3 className="text-lg md:text-xl font-bold text-red-600 mb-2 animate-fade-in-up">
+>>>>>>> bd3ca05 (logo-added)
     Apex Techno Warriors
   </h3>
 
   {/* Event Title */}
+<<<<<<< HEAD
   <h1 className="text-6xl md:text-8xl font-black font-display mb-6 animate-glitch text-hero">
+=======
+  <h1 className="text-hero-gradient hover:text-hero-hover md:text-8xl font-black text-gradient-to-r from-pink-500 to-purple-500 mb-6 animate-glitch">
+>>>>>>> bd3ca05 (logo-added)
     CHAKRAVYU
   </h1>
 </div>
