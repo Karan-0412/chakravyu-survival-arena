@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -7,43 +6,43 @@
 
 @layer base {
   :root {
-    --background: 0 0% 8%;
-    --foreground: 0 0% 95%;
+    --background: 240 15% 8%;
+    --foreground: 220 15% 95%;
 
-    --card: 0 0% 12%;
-    --card-foreground: 0 0% 90%;
+    --card: 240 15% 12%;
+    --card-foreground: 220 15% 90%;
 
-    --popover: 0 0% 10%;
-    --popover-foreground: 0 0% 90%;
+    --popover: 240 15% 10%;
+    --popover-foreground: 220 15% 90%;
 
-    --primary: 0 85% 50%;
-    --primary-foreground: 0 0% 98%;
+    --primary: 260 85% 60%;
+    --primary-foreground: 220 15% 98%;
 
-    --secondary: 0 0% 15%;
-    --secondary-foreground: 0 0% 85%;
+    --secondary: 240 15% 15%;
+    --secondary-foreground: 220 15% 85%;
 
-    --muted: 0 0% 20%;
-    --muted-foreground: 0 0% 65%;
+    --muted: 240 15% 20%;
+    --muted-foreground: 220 15% 65%;
 
-    --accent: 0 85% 45%;
-    --accent-foreground: 0 0% 98%;
+    --accent: 280 85% 55%;
+    --accent-foreground: 220 15% 98%;
 
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive: 350 84% 60%;
+    --destructive-foreground: 220 15% 98%;
 
-    --border: 0 0% 25%;
-    --input: 0 0% 18%;
-    --ring: 0 85% 50%;
+    --border: 240 15% 25%;
+    --input: 240 15% 18%;
+    --ring: 260 85% 60%;
 
     --radius: 0.75rem;
 
-    /* Custom Chakravyu colors */
-    --blood-red: 0 85% 50%;
-    --dark-red: 0 85% 35%;
-    --midnight: 0 0% 8%;
-    --charcoal: 0 0% 12%;
-    --smoke: 0 0% 25%;
-    --ghost: 0 0% 95%;
+    /* Custom Chakravyu colors - Updated to Purple/Blue theme */
+    --blood-red: 260 85% 60%;  /* Changed to vibrant purple */
+    --dark-red: 280 75% 45%;   /* Changed to deeper purple */
+    --midnight: 240 15% 8%;    /* Dark blue-tinted background */
+    --charcoal: 240 15% 12%;   /* Blue-tinted charcoal */
+    --smoke: 240 15% 25%;      /* Blue-tinted smoke */
+    --ghost: 220 15% 95%;      /* Cool white */
   }
 
   * {
@@ -52,7 +51,7 @@
 
   body {
     @apply bg-background text-foreground font-sans;
-    background: linear-gradient(135deg, hsl(0 0% 4%) 0%, hsl(0 0% 6%) 50%, hsl(0 0% 3%) 100%);
+    background: linear-gradient(135deg, hsl(240 15% 4%) 0%, hsl(250 15% 6%) 50%, hsl(240 15% 3%) 100%);
     min-height: 100vh;
   }
 
@@ -117,7 +116,7 @@
   135deg, 
   hsl(var(--blood-red)) 0%, 
   hsl(var(--dark-red)) 40%, 
-  black 50%, 
+  hsl(220 30% 15%) 50%, 
   hsl(var(--dark-red)) 60%, 
   hsl(var(--blood-red)) 100%
 );
