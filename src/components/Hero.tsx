@@ -70,7 +70,7 @@ useEffect(() => {
             <div className="flex space-x-4">
               {Object.entries(timeLeft).map(([unit, value]) => (
                 <div key={unit} className="text-center">
-                  <div className="bg-gradient-to-br from-primary to-dark-red text-primary-foreground px-2 py-2 rounded-lg font-bold text-2xl min-w-[50px] border-2 border-primary/30 shadow-lg shadow-primary/25 animate-pulse-red">
+                  <div className="bg-gradient-to-br from-primary to-dark-red text-primary-foreground px-1 py-1 rounded-lg font-bold text-2xl min-w-[40px] border-2 border-primary/30 shadow-lg shadow-primary/25 animate-pulse-red">
                     {value.toString().padStart(2, '0')}
                   </div>
                   <div className="text-sm text-muted-foreground mt-2 capitalize font-horror">

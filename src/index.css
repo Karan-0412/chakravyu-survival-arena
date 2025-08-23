@@ -112,7 +112,7 @@
   /* Typography variants */
   .text-hero {
     /* display: inline-block ; */
-    @apply text-7xl md:text-8xl font-black font-display tracking-tight;
+    @apply text-6xl md:text-8xl font-black font-display tracking-tight;
     background: linear-gradient(
   135deg, 
   hsl(var(--blood-red)) 0%, 
@@ -134,12 +134,12 @@
   }
 
   .text-section-title {
-    @apply text-3xl md:text-4xl font-bold font-display text-foreground;
+    @apply text-2xl md:text-2xl font-bold font-display text-foreground;
   }
 
   /* Button variants */
   .btn-primary {
-    @apply bg-primary text-primary-foreground px-8 py-4 rounded-lg font-semibold;
+    @apply bg-primary text-primary-foreground px-6 py-3 rounded-lg font-semibold;
     @apply hover:bg-primary/90 transition-all duration-300;
     @apply hover:scale-105 hover:shadow-lg hover:shadow-primary/25;
   }
@@ -171,8 +171,8 @@
     font-family: 'Inter', sans-serif;
   }
   .logo-bg {
-  width: 140px;
-  height: 60px;
+ width: 5.75rem;   /* ~140px if root font-size is 16px */
+  height: 3.75rem;  
   background-image: url('src/components/image.png'); 
   background-size: 70% auto;    /* make image smaller (70% of div width, auto height) */
   background-position: center;  
