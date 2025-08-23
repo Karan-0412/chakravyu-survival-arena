@@ -48,12 +48,12 @@ useEffect(() => {
       <div className="container mx-auto px-4 text-center z-10">
         <div className="animate-fade-in-up">
           <div className="text-center mb-6">
-  <h3 className="text-lg md:text-xl font-bold text-red-600 mb-2 animate-fade-in-up">
+  <h3 className="text-lg md:text-xl font-bold text-white-600 mb-2 animate-fade-in-up">
     Apex Techno Warriors
   </h3>
 
   {/* Event Title */}
-  <h1 className="text-hero-gradient hover:text-hero-hover md:text-8xl font-black text-gradient-to-r from-pink-500 to-purple-500 mb-6 animate-glitch">
+  <h1 className="text-hero md:text-8xl mb-6 bg-color:black">
     CHAKRAVYU
   </h1>
 </div>
@@ -65,12 +65,12 @@ useEffect(() => {
           
           {/* Countdown Timer */}
           <div className="flex justify-center items-center mb-8 space-x-1">
-            <Clock className="text-primary mr-3 animate-float" size={28} />
-            <span className="text-lg font-medium text-muted-foreground mr-4 font-horror">Death Clock:</span>
+            <Clock className="text-primary mr-3 animate-float" size={30} />
+            <span className="text-lg font-medium text-muted-foreground mr-4 font-horror">Event starts in:</span>
             <div className="flex space-x-4">
               {Object.entries(timeLeft).map(([unit, value]) => (
-                <div key={unit} className="text-center animate-countdown-pulse">
-                  <div className="bg-gradient-to-br from-primary to-dark-red text-primary-foreground px-4 py-3 rounded-lg font-bold text-2xl min-w-[70px] border-2 border-primary/30 shadow-lg shadow-primary/25 animate-pulse-red">
+                <div key={unit} className="text-center">
+                  <div className="bg-gradient-to-br from-primary to-dark-red text-primary-foreground px-2 py-2 rounded-lg font-bold text-2xl min-w-[50px] border-2 border-primary/30 shadow-lg shadow-primary/25 animate-pulse-red">
                     {value.toString().padStart(2, '0')}
                   </div>
                   <div className="text-sm text-muted-foreground mt-2 capitalize font-horror">

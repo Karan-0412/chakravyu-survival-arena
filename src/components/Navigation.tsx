@@ -28,12 +28,7 @@ export const Navigation = () => {
     }`}>
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
-<div className="logo-bg"></div>
-
-
-
-
-          
+<div className="logo-bg"></div> 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
