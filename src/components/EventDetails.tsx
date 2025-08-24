@@ -6,7 +6,7 @@ export const EventDetails = () => {
     {
       icon: Calendar,
       title: "Date & Time",
-      description: "August 25, 2025 | 9:00 PM - 5:00 PM"
+      description: "August 25, 2025 | 9:00 AM - 4:30 PM"
     },
     {
       icon: MapPin,
@@ -16,7 +16,7 @@ export const EventDetails = () => {
     {
       icon: Users,
       title: "Participants",
-      description: "264 Players | Teams of 4 Members"
+      description: "66 Teams | 264 Players"
     },
     {
       icon: Trophy,
