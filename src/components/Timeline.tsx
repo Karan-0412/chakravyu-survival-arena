@@ -4,25 +4,25 @@ import { Clock, CheckCircle, Circle } from "lucide-react";
 export const Timeline = () => {
   const timelineEvents = [
     {
-      time: "9:00 PM",
+      time: "9:00 AM",
       title: "Registration & Check-in",
       description: "Team verification and briefing session",
       completed: false
     },
     {
-      time: "9:30 PM",
+      time: "9:30 AM",
       title: "Opening Ceremony",
       description: "Welcome address and game rules explanation",
       completed: false
     },
     {
-      time: "10:00 PM",
+      time: "10:00 AM",
       title: "Round-1",
       description: "Classic elimination game with a deadly twist",
       completed: false
     },
     {
-      time: "11:30 PM",
+      time: "11:30 AM",
       title: "Round-2",
       description: "Precision and patience under pressure",
       completed: false

@@ -25,7 +25,7 @@ export const Prizes = () => {
       icon: Award,
       color: "text-amber-600",
       bgColor: "bg-amber-600/20",
-      description: "Third Position Prize + Medal"
+      description: "Third Position Prize + Certificate "
     }
   ];
 
@@ -90,7 +90,7 @@ export const Prizes = () => {
           <div className="inline-flex items-center bg-primary/20 border border-primary/50 rounded-lg px-8 py-4">
             <Trophy className="text-primary mr-4" size={32} />
             <div>
-              <div className="text-sm text-primary font-semibold">TOTAL PRIZE POOL</div>
+              <div className="text-sm text-primary font-semibold">TOTAL PRIZE WORTH </div>
               <div className="text-3xl font-black text-primary font-display">₹10,000</div>
             </div>
           </div>

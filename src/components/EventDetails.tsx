@@ -20,8 +20,8 @@ export const EventDetails = () => {
     },
     {
       icon: Trophy,
-      title: "Prize Pool",
-      description: "₹10,000 Total Prize Money"
+      title: "Prize Worth",
+      description: "₹10,000 Total Prize Worth"
     }
   ];
 
