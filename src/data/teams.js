@@ -1450,5 +1450,20 @@ export const mockTeams = [
         "uid": "23BCS10954"
       }
     ]
-  }
+  },
+  {
+  "id": 67,
+  "teamName": "Chaos Runners",
+  "leader": {
+    "name": "Krish",
+    "uid": "24BAI70961"
+  },
+  "members": [
+    { "name": "Harsh Khajuria", "uid": "24BAI70960" },
+    { "name": "Manuj", "uid": "24BAI70959" },
+    { "name": "Priyom", "uid": "24BAI70963" }
+  ]
+}
+
+
 ]
