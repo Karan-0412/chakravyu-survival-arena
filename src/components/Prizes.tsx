@@ -17,7 +17,7 @@ export const Prizes = () => {
       icon: Medal,
       color: "text-gray-400",
       bgColor: "bg-gray-400/20",
-      description: "Runner-up Prize + Certificate"
+      description: "Exclusive Trophy + Certificate"
     },
     {
       position: "3rd Place",
@@ -25,7 +25,7 @@ export const Prizes = () => {
       icon: Award,
       color: "text-amber-600",
       bgColor: "bg-amber-600/20",
-      description: "Third Position Prize + Certificate "
+      description: "Exclusive Trophy + Certificate "
     }
   ];
 
