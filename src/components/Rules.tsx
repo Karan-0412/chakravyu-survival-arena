@@ -7,6 +7,18 @@ export const Rules = () => {
 
   const rules = [
     {
+      icon: Zap,
+      title: "Participation Rules",
+      content: [
+        "All 4 team members must be present at the venue by 9:30 AM for in-person registration.",
+        "No laptops or external devices are required or allowed.",
+        "Participants must follow a decent dress code (white or blue t-shirt) and carry their ID cards.",
+        "Conflicts or arguments will not be entertained; decisions of the conducting team are final.",
+        "Teams must follow the rules of every round as explained by the coordinators.",
+        "Any malpractice or misbehavior will lead to disqualification."
+      ]
+    },
+    {
       icon: AlertTriangle,
       title: "Elimination Rules",
       content: [

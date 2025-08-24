@@ -16,7 +16,7 @@ export const EventDetails = () => {
     {
       icon: Users,
       title: "Participants",
-      description: "260 Players | Teams of 4 Members"
+      description: "264 Players | Teams of 4 Members"
     },
     {
       icon: Trophy,
