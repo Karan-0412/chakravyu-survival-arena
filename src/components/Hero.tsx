@@ -11,7 +11,7 @@ export const Hero = () => {
 });
 
 useEffect(() => {
-  const eventDate = new Date(2025, 7, 25, 0, 0, 0); // August 25, 2025, 12:00
+  const eventDate = new Date(2025, 7, 25, 9, 0, 0); // August 25, 2025, 12:00
 
   const timer = setInterval(() => {
     const now = new Date().getTime();
