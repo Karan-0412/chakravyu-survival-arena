@@ -53,8 +53,10 @@ export default function ConfirmedTeams() {
     (team) =>
       team.teamName.toLowerCase().includes(searchTerm.toLowerCase()) ||
       team.leader.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      String(team.leader.uid).toLowerCase().includes(searchTerm.toLowerCase()) ||
       team.members.some((member) =>
-        member.name.toLowerCase().includes(searchTerm.toLowerCase()),
+        String(member.uid).toLowerCase().includes(searchTerm.toLowerCase()) ||
+        member.name.toLowerCase().includes(searchTerm.toLowerCase())
       ),
   );
 
