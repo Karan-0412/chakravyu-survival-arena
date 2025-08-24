@@ -11,7 +11,7 @@ export const EventDetails = () => {
     {
       icon: MapPin,
       title: "Venue",
-      description: "D8 Auditorium "
+      description: "D1 Seminar Hall"
     },
     {
       icon: Users,

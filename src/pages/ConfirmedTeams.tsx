@@ -9,95 +9,9 @@ import {
   ChevronDown,
 } from "lucide-react";
 import chakravyuLogo from "../data/logos/chakravyu-logo.png";
+
 // cut from here to there and import the file here
-
-interface TeamMember {
-  name: string;
-  uid: string;
-  role: string;
-}
-
-interface Team {
-  id: number;
-  teamName: string;
-  leader: TeamMember;
-  members: TeamMember[];
-}
-
-const mockTeams: Team[] = [
-  {
-    id: 1,
-    teamName: "Alpha Innovators",
-    leader: { name: "Sarah Chen", uid: "SC-2024-001", role: "Team Leader" },
-    members: [
-      { name: "Alex Rivera", uid: "AR-2024-002", role: "Frontend Developer" },
-      { name: "Maya Singh", uid: "MS-2024-003", role: "Backend Developer" },
-      { name: "Jordan Kim", uid: "JK-2024-004", role: "UI/UX Designer" },
-    ],
-  },
-  {
-    id: 2,
-    teamName: "Digital Pioneers",
-    leader: {
-      name: "Marcus Rodriguez",
-      uid: "MR-2024-007",
-      role: "Team Leader",
-    },
-    members: [
-      { name: "Elena Kozlov", uid: "EK-2024-008", role: "Data Scientist" },
-      { name: "Raj Patel", uid: "RP-2024-009", role: "DevOps Engineer" },
-      { name: "Sophie Turner", uid: "ST-2024-010", role: "Product Manager" },
-    ],
-  },
-  {
-    id: 3,
-    teamName: "Code Warriors",
-    leader: { name: "Emma Thompson", uid: "ET-2024-015", role: "Team Leader" },
-    members: [
-      {
-        name: "Carlos Mendez",
-        uid: "CM-2024-016",
-        role: "Full Stack Developer",
-      },
-      { name: "Aisha Johnson", uid: "AJ-2024-017", role: "Mobile Developer" },
-      { name: "Liam O'Connor", uid: "LO-2024-018", role: "QA Engineer" },
-    ],
-  },
-  {
-    id: 4,
-    teamName: "Tech Titans",
-    leader: { name: "James Wilson", uid: "JW-2024-023", role: "Team Leader" },
-    members: [
-      { name: "Priya Sharma", uid: "PS-2024-024", role: "AI/ML Engineer" },
-      { name: "David Zhang", uid: "DZ-2024-025", role: "Cloud Architect" },
-      { name: "Rachel Green", uid: "RG-2024-026", role: "Security Engineer" },
-    ],
-  },
-  {
-    id: 5,
-    teamName: "Future Builders",
-    leader: { name: "Priya Patel", uid: "PP-2024-031", role: "Team Leader" },
-    members: [
-      {
-        name: "Hassan Al-Ahmad",
-        uid: "HA-2024-032",
-        role: "Blockchain Developer",
-      },
-      { name: "Lisa Wong", uid: "LW-2024-033", role: "AR/VR Developer" },
-      { name: "Miguel Santos", uid: "MS-2024-034", role: "Systems Analyst" },
-    ],
-  },
-  {
-    id: 6,
-    teamName: "Innovation Squad",
-    leader: { name: "David Kim", uid: "DK-2024-042", role: "Team Leader" },
-    members: [
-      { name: "Nina Petrov", uid: "NP-2024-043", role: "Research Engineer" },
-      { name: "Kevin Lee", uid: "KL-2024-044", role: "Platform Engineer" },
-      { name: "Zara Ahmed", uid: "ZA-2024-045", role: "Growth Hacker" },
-    ],
-  },
-];
+import { mockTeams } from "../data/teams.js";
 
 // Floating particles component
 const FloatingParticles = () => {
